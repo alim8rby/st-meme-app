@@ -14,7 +14,7 @@ else:
     dtype = torch.float32
     
 #########
-@st.cache_resourced
+@st.cache_resource
 def load_model():
     pipeline = diffusers.AutoPipelineForText2Image.from_pretrained(
         "CompVis/stable-diffusion-v1-4", torch_dtype=dtype
